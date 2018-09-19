@@ -1,0 +1,22 @@
+﻿@model Test.Models.User
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h3>Create account</h3>
+
+    @using (Html.BeginForm("LogIn","Home",FormMethod.Post))
+    {
+        
+      @Html.TextBoxFor( model => model.Username, new { @class = "form-control" , @placeholder = "Username"})
+      @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "Password" })
+   
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-primary" onclick="Home/LogIn"/>
+            </div>
+        
+    }
+
+</div>

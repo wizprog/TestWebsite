@@ -1,0 +1,22 @@
+﻿
+@model Test.Models.User
+
+@{
+    ViewBag.Title = "NewIndex";
+    Layout = "~/Views/Shared/SplitScreenLayout.cshtml";
+}
+
+<h3 style="color:black">Create account</h3>
+
+@using (Html.BeginForm("LogIn", "Home", FormMethod.Post))
+{
+
+    @Html.TextBoxFor(model => model.Username, new { @class = "form-control", @placeholder = "Username" })
+    @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "Password" })
+
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Create" class="btn btn-primary" onclick="Home/LogIn" />
+    </div>
+
+}
+
