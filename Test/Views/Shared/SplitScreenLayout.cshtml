@@ -9,25 +9,61 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/css")
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>SplitScreen</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="icon" href="~/Content/Icons/webicon.png">
+
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+
+    </script>
+
+    <title>easyWay</title>
 </head>
-<body>
+<body style="{margin:0}">
     <div class="fade-in">
-        <div class="split left">
-            <div class="centered">
-                <h2>Jane Flex</h2>
-                <p>Some text.</p>
+            
+               
+      
+            <div class="split left">
+                <div class="w3-content w3-section">
+                    <img class="mySlides" src="~/Content/Images/img1.jpg" style="width:100%">
+                    <img class="mySlides" src="~/Content/Images/img3.jpg" style="width:100%">
+                    <img class="mySlides" src="~/Content/Images/img8.jpg" style="width:100%">
+                </div>
             </div>
-        </div>
 
-        <div class="split right">
-            <div class="centered">
-                @RenderBody()
+            <div class="split right">
+            <!--  <p class="welcomeparagraph"> &copy; Organized by students of Faculty of electrical engineering</p>  --> 
+
+                <div class="centered">
+
+                    @RenderBody()
+                </div>
+                <a href="https://www.facebook.com/phoenox3" class="fa fa-facebook" style="position: absolute; bottom: 0pt; right: 47%;"></a>
             </div>
-            <a href="https://www.facebook.com/babicuni96" class="fa fa-facebook" style="position: absolute; bottom: 0pt; right: 47%;"></a>
-        </div>
 
-    </div>
+        </div>
 </body>
 </html>

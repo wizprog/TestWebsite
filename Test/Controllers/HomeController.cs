@@ -7,8 +7,9 @@ namespace Test.Controllers
     {
         public ActionResult Index()
         {
-            return View("NewIndex");
+            return View("WelcomeView");
         }
+
 
         public ActionResult About()
         {
@@ -39,6 +40,11 @@ namespace Test.Controllers
 
 
             return View("Index");
+        }
+
+        public ActionResult AfterSplit()
+        {
+            return View("StartPage");
         }
     }
 }
