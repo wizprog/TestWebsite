@@ -122,3 +122,30 @@ html, body {
     top: 0pt;
     right: 20%;
 }
+
+.link {
+    color: black;
+}
+
+.form-control{
+    border:solid;
+    border-color: black;
+}
+
+
+.button2 {
+    text-align: center;
+    background-color: white;
+    border-color: black;
+    border: 4px solid;
+    transition-duration: 0.8s;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+    .button2:hover {
+        border-color: black;
+        background-color: black;
+        color: white;
+    }

@@ -27,6 +27,10 @@ namespace Test
                       "~/Content/bootstrap-superhero.css",
                       "~/Content/site.css",
                       "~/Content/splitscreen.css"));
+
+            bundles.Add(new StyleBundle("~/Content/sidemenu.css").Include(
+                    "~/Content/sidemenu.css"
+                ));
         }
     }
 }

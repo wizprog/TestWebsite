@@ -1,0 +1,107 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    @Styles.Render("~/Content/sidemenu.css")
+
+    <meta name="viewport" content="width=device-width" />
+    <title>easyWay</title>
+
+    <link rel="icon" href="~/Content/Icons/webicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#MenuIcon").click(function () {
+                $("#MainMenu").css("left", "0px");
+                function showMenu() {
+                    $("#MainMenu").css("-webkit-clip-path", "polygon(0 0,100% 0,100% 100%,0% 100%)");
+                    $("#MenuIcon").animate({ right: '-100' }, 300);
+                }
+                setTimeout(showMenu, 100);
+            });
+
+            $("#close").click(function () {
+                $("#MainMenu").css("-webkit-clip-path", "polygon(0 0,0% 0,100% 100%,0% 100%)");
+                function hideMenu() {
+                    $("#MainMenu").css("left", "-300px");
+                    $("#MenuIcon").animate({ right: '50' }, 300);
+                }
+                setTimeout(hideMenu, 300);
+
+                function originalLayout() {
+                    $("#MainMenu").css("-webkit-clip-path", "polygon(0 0,100% 0,0% 100%,0% 100%)");
+                }
+                setTimeout(originalLayout, 600);
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '328811434556148',
+                    autoLogAppEvents: true,
+                    xfbml: true,
+                    version: 'v3.1'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) { return; }
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
+    <div class="fade-in">
+
+        <div id="MenuIcon">
+            <div id="MenuLine"></div>
+        </div>
+
+        <div id="MainMenu">
+
+            <div id="logo">
+                <img src="~/Content/Icons/webicon.png" height="75px" width="75px" />
+            </div>
+            <ul>
+                <li> <a href="Index">HOME </a><div class="line"></div></li>
+                <li> <a href="AboutView">ABOUT </a><div class="line"></div></li>
+                <li> <a href="ContactUs">CONTACT US </a><div class="line"> </li>
+                <li> <a href="University">UNIVERSITY </a><div class="line"></div></li>
+                <li> <a href="HighSchool">HIGH SCHOOL </a><div class="line"></div></li>
+                <li> <a href="PrimarySchool">PRIMARY SCHOOL </a><div class="line"></div></li>
+
+            </ul>
+            <div id="close">
+                <img src="~/Content/Icons/backicon2.png" style="width:50px; height:50px" />
+            </div>
+
+        </div>
+        
+        @RenderBody()
+
+   </div>
+
+    <div class="fb-customerchat" page_id="811556575559591"></div>
+
+</body>
+</html>

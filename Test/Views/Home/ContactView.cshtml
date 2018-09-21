@@ -1,0 +1,27 @@
+﻿
+@model Test.Models.MailInfo
+
+@{
+    ViewBag.Title = "ContactView";
+    Layout = "~/Views/Shared/SplitScreenLayout.cshtml";
+}
+
+@using (Html.BeginForm("SendMail", "Home", FormMethod.Post))
+{
+
+    @Html.TextBoxFor(m => m.name, new { @class = "form-control", @placeholder = "Full Name", @style="border:solid; border-color:black"});
+    <br/>
+    @Html.TextBoxFor(m => m.contactMail, new { @class = "form-control", @placeholder = "Contact Mail", @style = "border:solid; border-color:black" });
+    <br />
+    @Html.TextBoxFor(m => m.subject, new { @class = "form-control", @placeholder = "Subject", @style = "border:solid; border-color:black" } );
+    <br /> 
+    @Html.TextBoxFor(m => m.question, new { @class = "form-control", @placeholder = "Question", @style="border:solid; border-color:black"});
+    <br />
+
+    <input type="submit" value="Send" class="button1"/>
+    <br/>    <br />    <br />
+
+    <div id="close" onclick="javascript:history.back()">
+        <img src="~/Content/Icons/backicon2.png" style="width:50px; height:50px; cursor:pointer" />
+    </div>
+}

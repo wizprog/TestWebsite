@@ -170,6 +170,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DbModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\MailInfo.cs" />
     <Compile Include="Models\User.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
@@ -179,18 +180,27 @@
     <Content Include="Content\bootstrap-superhero.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Icons\backicon.png" />
+    <Content Include="Content\Icons\backicon2.png" />
     <Content Include="Content\Icons\face.png" />
+    <Content Include="Content\Icons\faceicon2.png" />
     <Content Include="Content\Icons\insta.png" />
     <Content Include="Content\Icons\pcicon.png" />
     <Content Include="Content\Icons\webicon.png" />
-    <Content Include="Content\Images\img8.jpg" />
-    <Content Include="Content\Images\img2.png" />
+    <Content Include="Content\Images\afterimg1.jpg" />
+    <Content Include="Content\Images\afterimg2.jpg" />
+    <Content Include="Content\Images\afterimg3.png" />
+    <Content Include="Content\Images\img10.jpg" />
+    <Content Include="Content\Images\img11.jpg" />
+    <Content Include="Content\Images\img12.jpg" />
+    <Content Include="Content\Images\img13.jpg" />
+    <Content Include="Content\Images\img14.jpg" />
+    <Content Include="Content\Images\img16.jpg" />
     <Content Include="Content\Images\img3.jpg" />
-    <Content Include="Content\Images\img5.png" />
     <Content Include="Content\Images\img1.jpg" />
-    <Content Include="Content\Images\img9.jpg" />
     <Content Include="Content\Logos\logo1.svg" />
     <Content Include="Content\Logos\logo2.svg" />
+    <Content Include="Content\sidemenu.css" />
     <Content Include="Content\splitscreen.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -249,6 +259,12 @@
     <Content Include="Views\Home\NewIndex.cshtml" />
     <Content Include="Views\Home\WelcomeView.cshtml" />
     <Content Include="Views\Home\StartPage.cshtml" />
+    <Content Include="Views\Shared\SideMenuLayout.cshtml" />
+    <Content Include="Views\Home\AboutView.cshtml" />
+    <Content Include="Views\Home\ContactView.cshtml" />
+    <Content Include="Views\Home\UniversityView.cshtml" />
+    <Content Include="Views\Home\HighSchoolView.cshtml" />
+    <Content Include="Views\Home\PrimarySchoolView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

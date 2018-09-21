@@ -1,0 +1,265 @@
+
+
+body {
+    padding:0px;
+    margin:0px;
+    background-color: black;
+    background-image: url("Images/img14.jpg");
+    background-attachment: fixed;
+}
+
+#MenuIcon {
+    
+    z-index: 999;
+    height: 25px;
+    width: 50px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+    #MenuIcon:hover {
+        cursor: pointer;
+    }
+
+#MenuLine {
+    height: 4px;
+    width: 50px;
+    background-color:  white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .3s;
+}
+
+#MenuIcon:hover #MenuLine {
+    width: 40px;
+}
+
+#MenuLine::before {
+    content: '';
+    height: 4px;
+    width: 40px;
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+    transition: all .3s;
+}
+
+#MenuIcon:hover #MenuLine::before {
+    width: 50px;
+}
+
+#MenuLine::after {
+    content: '';
+    height: 4px;
+    width: 40px;
+    background-color: white;
+    position: absolute;
+    margin-top: -10px;
+    transition: all .3s;
+}
+
+#MenuIcon:hover #MenuLine::after {
+    width: 50px;
+}
+
+#MainMenu {
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+    -webkit-clip-path: polygon(0 0,100% 0,0% 100%,0% 100%);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: -300px;
+    transition: all .5s ease-in-out;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: arial;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+    ul li {
+        margin: 20px;
+        white-space: nowrap;
+    }
+
+        ul li:hover {
+            cursor: pointer;
+        }
+
+.line {
+    height: 2px;
+    width: 150px;
+    background-color: black;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all .3s;
+}
+
+ul li:hover .line {
+    width: 180px;
+}
+
+#logo {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#close {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+    #close:hover {
+        cursor: pointer;
+    }
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.divOne {
+
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    background-image: url("Images/afterimg2.jpg");
+    background-position: center;
+    background-size: cover;
+    top: 50px;
+    margin-top: 110px;
+    transition: all .5s;
+}
+
+.divOneParent {
+    width: 100%;
+    height: 300px;
+}
+
+
+.innerDivOne{
+    position:center;
+}
+
+/* ----------------------------------------------------------------------------*/
+
+
+.pimg1, .pimg2, .pimg3 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+    fixed = parallax
+    scroll = normal
+  */
+    background-attachment: fixed;
+}
+
+.pimg1 {
+
+    background-color:black;
+    height:200px;
+
+}
+
+.pimg2 {
+    background-image: url('Images/afterimg2.jpg');
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url('Images/afterimg3.png');
+    min-height: 400px;
+}
+
+.sectionOne {
+    margin-top : 20px;
+    text-align: center;
+    padding: 50px 80px;
+}
+.section {
+    font-size: 20px;
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+}
+
+    .ptext .border {
+        background-color: #111;
+        color: #fff;
+        padding: 20px;
+    }
+
+        .ptext .border.trans {
+            background-color: transparent;
+        }
+
+@media(max-width:568px) {
+    .pimg1, .pimg2, .pimg3 {
+        background-attachment: scroll;
+    }
+}
+
+.image-class {
+    color: white;
+    font-family:  Oxygen;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 8px;
+}
